@@ -1,3 +1,4 @@
-<p>
-  home works!
-</p>
+<div class="d-flex flex-wrap">
+    
+  <app-item *ngFor="let item of items | async" [name]="item.name" [address]="item.address" [key]="item.key"></app-item>
+</div>

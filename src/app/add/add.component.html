@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" name="name" ngModel #name="ngModel">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Address" name="address" ngModel #address="ngModel">
+    </div>
+    <div class="col">
+      <input type="submit" value="OK">
+    </div>
+  </div>
+</form>
