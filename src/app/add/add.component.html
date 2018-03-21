@@ -1,13 +1,38 @@
-<form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Name" name="name" ngModel #name="ngModel">
+<div class="container">
+
+  <!-- <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Name" name="name" #name="ngModel" [(ngModel)]="selectedItem.name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Address" name="address" #address="ngModel" [(ngModel)]="selectedItem.address">
+      </div>
+      <div class="col">
+        <input type="submit" value="OK">
+      </div>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Address" name="address" ngModel #address="ngModel">
+  </form> -->
+
+
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="form-group">
+      <label for="locaName">Name</label>
+      <input class="form-control" type="text" name="name" #name="ngModel" [(ngModel)]="selectedItem.name" id="locaName">
     </div>
-    <div class="col">
-      <input type="submit" value="OK">
+
+    <div class="form-group">
+      <label for="locaAddress">Address</label>
+      <input class="form-control" type="text" name="address" #address="ngModel" [(ngModel)]="selectedItem.address" id="locaAddress">
     </div>
-  </div>
-</form>
+
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" (change)="onfileselected($event)" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="OK" class="form-control">
+    </div>
+  </form>
+</div>

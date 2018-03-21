@@ -6,7 +6,7 @@ import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'add', component: AddComponent }
+  { path: 'submit', component: AddComponent }
 ];
 
 @NgModule({

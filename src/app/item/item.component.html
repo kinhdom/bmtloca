@@ -3,8 +3,7 @@
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
     <p class="card-text"> {{address}} </p>
-    <button type="button" class="btn btn-success">Edit</button>
+    <button type="button" class="btn btn-success" (click)="edit(item)" >Edit</button>
     <button type="button" class="btn btn-warning" (click)="delete(key)" >Delete</button>
   </div>
-
 </div>

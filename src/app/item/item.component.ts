@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
+import { Loca } from '../loca';
 
 @Component({
   selector: 'app-item',
@@ -10,12 +12,16 @@ export class ItemComponent implements OnInit {
   @Input() name: string;
   @Input() address: string;
   @Input() key: string;
-  constructor(private db: AngularFireDatabase) { }
+  @Input() item: Loca
+  constructor(private db: AngularFireDatabase, private router: Router) { }
 
   ngOnInit() {
   }
   delete(key: string) {
     this.db.list('bmtcogi').remove(key)
+  }
+  edit(selectedItem) {
+    this.router.navigate(['submit'], { queryParams: selectedItem })
   }
 
 }
