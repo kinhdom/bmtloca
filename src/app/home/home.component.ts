@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs/Observable';
+import { LocaService } from '../loca.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

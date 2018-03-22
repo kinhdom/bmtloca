@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ItemComponent } from './item/item.component';
 import { AddComponent } from './add/add.component';
 
+import { LocaService } from '../app/loca.service';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { AddComponent } from './add/add.component';
     AngularFireStorageModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LocaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
