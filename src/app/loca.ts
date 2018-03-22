@@ -1,4 +1,5 @@
 export class Loca {
-    name:string;
-    address:string;
+    name: string;
+    address: string;
+    img: string;
 }

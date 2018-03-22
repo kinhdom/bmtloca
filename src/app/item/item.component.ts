@@ -12,6 +12,7 @@ export class ItemComponent implements OnInit {
   @Input() name: string;
   @Input() address: string;
   @Input() key: string;
+  @Input() img:string;
   @Input() item: Loca
   constructor(private db: AngularFireDatabase, private router: Router) { }
 
